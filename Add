@@ -1,0 +1,31 @@
+import tkinter as tk
+
+def plus():
+    value1 = int(a.get())
+    value2 = int(b.get())
+    result = value1 + value2
+    label.config(text="Answer is: " + str(result))
+
+window = tk.Tk()
+
+frame = tk.Frame(window, width=50, height=50, bg="yellow")
+label = tk.Label(window, text="Simple Calculator")
+label.pack()
+frame.pack()
+
+label = tk.Label(window, text="Enter Number")
+label.pack()
+
+a = tk.Entry(window)
+a.pack()
+
+b = tk.Entry(window)
+b.pack()
+
+button = tk.Button(window, text="Add", command=plus)
+button.pack()
+
+label = tk.Label(window)
+label.pack()
+
+window.mainloop()
